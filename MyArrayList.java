@@ -16,5 +16,19 @@ public class MyArrayList {
 		}
 	}
 	
+	public void remove(int index) {
+		for (int i = index; i < size - 1; i++) {
+			array[i] = array[i + 1];
+		}
+		size--;
+	}
 
+	public int getSize() {
+		return size;
+	}
+
+	public String get(int index) {
+		return array[index];
+	}
+	
 }

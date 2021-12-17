@@ -17,10 +17,25 @@ public class MyArrayList {
 	}
 	
 	public void remove(int index) {
-		for (int i = index; i < size - 1; i++) {
-			array[i] = array[i + 1];
-		}
+		if (index >= 0 && index < size) {
+			for (int i = index; i < size - 1; i++) {
+				array[i] = array[i + 1];
+			}
 		size--;
+		}
+	}
+	
+	public void remove(String s) {
+		int index = -1;
+		for (int i = 0; i < size; i++) {
+			if (s.contentEquals(array[i])) {
+				index = i;
+				break;
+			}
+		}
+		if (index != -1) {
+			remove(index);
+		}
 	}
 
 	public int getSize() {
@@ -28,7 +43,9 @@ public class MyArrayList {
 	}
 
 	public String get(int index) {
-		return array[index];
+		if (index >= 0 && index < size) {
+			return array[index];
+		} else return "not found";
 	}
 	
 }

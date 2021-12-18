@@ -6,6 +6,7 @@ public class MyArrayList {
 	private String[] array = new String[10];
 	private int size = 0;
 	
+	//add element and resize array size if it is full
 	public void add(String s) {
 		array[size] = s;
 		size++;
@@ -18,6 +19,7 @@ public class MyArrayList {
 		}
 	}
 	
+	//remove by index of element
 	public void remove(int index) {
 		if (index >= 0 && index < size) {
 			for (int i = index; i < size - 1; i++) {
@@ -27,6 +29,7 @@ public class MyArrayList {
 		}
 	}
 	
+	//remove by value of element
 	public void remove(String s) {
 		int index = -1;
 		for (int i = 0; i < size; i++) {
@@ -44,6 +47,7 @@ public class MyArrayList {
 		return size;
 	}
 
+	//get element by index
 	public String get(int index) {
 		if (index >= 0 && index < size) {
 			return array[index];

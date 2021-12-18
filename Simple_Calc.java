@@ -16,6 +16,7 @@ public class Simple_Calc {
 		num2 = reader.nextDouble();
 		System.out.println("\nEnter an operator (+, -, *, /): ");
 		op = reader.next().charAt(0);
+		reader.close();
 		
 		switch(op) {
 		case '+': ans = num1 + num2;
@@ -33,5 +34,4 @@ public class Simple_Calc {
 		System.out.print("\nThe result is: \n");
 		System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
 	}
-
 }

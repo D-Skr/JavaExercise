@@ -26,7 +26,7 @@ public class MT_GuessNumber {
 		Thread player = new Thread(new Runnable() { //anonymous class
 			@Override
 			public void run() {
-				while (!win) {
+				while (!win) { // repeat generating new number till it equals to 1st number
 					int guessNumber = (int) (Math.random() * 1000000000);
 					if (guessNumber == random) {
 						win = true;
